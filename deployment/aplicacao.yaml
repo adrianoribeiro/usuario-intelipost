@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: intelipost-usuario-api
+spec:
+ containers:
+  - name: intelipost-usuario
+    image: adrianoribeiro/intelipost-usuario
+    ports:
+     - containerPort: 80

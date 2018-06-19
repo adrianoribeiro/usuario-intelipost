@@ -1,0 +1,19 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: intelipost-usuario
+spec:
+  selector:
+    matchLabels:
+      app: intelipost-usuario
+  replicas: 3 
+  template: 
+    metadata:
+      labels:
+        app: intelipost-usuario
+    spec:
+      containers:
+      - name: intelipost-usuario
+        image: adrianoribeiro/intelipost-usuario:latest
+        ports:
+        - containerPort: 80
